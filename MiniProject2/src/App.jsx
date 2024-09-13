@@ -8,6 +8,7 @@ import { EXAMPLES } from "./data.js";
 
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
+
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
   const [user, setUser] = useState(null); // 추가: 사용자 상태 관리
@@ -101,8 +102,8 @@ function App() {
           ) : (
             // 사용자 로그인 상태일 때 로그아웃 버튼 표시
             <div>
-              <p>Logged in as: {user.name}</p>
-              <button onClick={handleLogout}>Logout</button>
+              <h2>환영합니다. 오늘도 러닝으로 refresh 해보시죠!</h2>
+              <h2><button id="logout" onClick={handleLogout}>Logout</button></h2>
             </div>
           )}
         </section>
