@@ -1,5 +1,6 @@
 /* 로그인 버튼을 가운데 정렬 */
 .login-container {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,3 +16,4 @@
     align-items: center;
     min-height: 10vh; /* 필요에 따라 조정 가능 */
 }
+
