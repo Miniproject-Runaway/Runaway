@@ -9,14 +9,14 @@ function MainPage({ user }) {
         <>
           {/* 러닝 기록하기 버튼 */}
           <Link to="/record">
-            <button>러닝 기록하기</button>
+            <button className="running-record"> &ensp;  러닝 기록하기</button>
           </Link>
           <br></br>
           <br></br>
 
           {/* 기록 보기 버튼 */}
           <Link to="/records">
-            <button>기록 보기</button>
+            <button className="running-record">&ensp; &ensp; 최근 활동</button>
           </Link>
         </>
       ) : (
