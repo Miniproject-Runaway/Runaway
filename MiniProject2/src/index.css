@@ -29,7 +29,7 @@ main {
 #core-concepts {
   padding: 2rem;
   border-radius: 6px;
-  background-color: #24b34a;
+  background: linear-gradient(40deg, #42be63, #42be63, #aecc07, #03d5ff);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
