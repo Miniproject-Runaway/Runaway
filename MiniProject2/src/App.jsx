@@ -1,11 +1,10 @@
 import { useState } from "react";
 
 import { CORE_CONCEPTS } from "./data.js";
-import { Header } from "./components/Header/Header.jsx";
 import { CoreConcept } from "./components/CoreConcept.jsx";
-import { TabButton } from "./components/TabButton.jsx";
-import { EXAMPLES } from "./data.js";
 
+
+import { Header } from "./components/Header/Header.jsx";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 
@@ -32,20 +31,6 @@ function App() {
     localStorage.removeItem("user"); // localStorage에서 사용자 정보 제거
   }
 
-  let tabContent = <p>Please select a topic.</p>;
-
-  if (selectedTopic) {
-    tabContent = (
-      <div id="tab-content">
-        <h3>{EXAMPLES[selectedTopic].title}</h3>
-        <p>{EXAMPLES[selectedTopic].description}</p>
-        <pre>
-          <code>{EXAMPLES[selectedTopic].code}</code>
-        </pre>
-      </div>
-    );
-  }
-
   return (
     <div>
       <Header />
@@ -58,36 +43,8 @@ function App() {
             ))}
           </ul>
         </section>
-        <section id="examples">
-          <h2>바로가기</h2>
-          <menu>
-            <TabButton
-              isSelected={selectedTopic === "components"}
-              onSelect={() => handleSelect("components")}
-            >
-              로그인
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "jsx"}
-              onSelect={() => handleSelect("jsx")}
-            >
-              짐 보관 SPOT
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "props"}
-              onSelect={() => handleSelect("props")}
-            >
-              러닝 보관 SPOT
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "state"}
-              onSelect={() => handleSelect("state")}
-            >
-              러닝 기록
-            </TabButton>
-          </menu>
-          {tabContent}
-        </section>
+        <br></br>
+
         <section>
           {!user ? (
             // 사용자 로그인 상태가 아닐 때 GoogleLogin 표시
