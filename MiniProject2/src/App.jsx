@@ -1,10 +1,9 @@
 import { useState } from "react";
-
 import { CORE_CONCEPTS } from "./data.js";
 import { CoreConcept } from "./components/CoreConcept.jsx";
-
-
 import { Header } from "./components/Header/Header.jsx";
+import './login.css'
+
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 
@@ -48,6 +47,7 @@ function App() {
         <section>
           {!user ? (
             // 사용자 로그인 상태가 아닐 때 GoogleLogin 표시
+          <div className="login-container">
             <GoogleLogin
               onSuccess={handleLoginSuccess}
               onError={() => {
@@ -56,6 +56,7 @@ function App() {
               useOneTap={false} // 자동 로그인 방지
               auto_select={false} // 자동 계정 선택 방지
             />
+            </div>
           ) : (
             // 사용자 로그인 상태일 때 로그아웃 버튼 표시
             <div>
