@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
   const [formData, setFormData] = useState({
     runningDate: "",

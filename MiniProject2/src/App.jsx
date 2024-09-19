@@ -9,7 +9,7 @@ import MainPage from "./components/pages/MainPage";
 import RecordFormPage from "./components/pages/RecordFormPage";
 import RecordListPage from "./components/pages/RecordListPage";
 import RecordDetailPage from "./components/pages/RecordDetailPage";
-import './login.css'; // 로그인 CSS 파일 추가
+import './button.css'; // 로그인 CSS 파일 추가
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -78,9 +78,6 @@ function App() {
         <section>
         <br></br>
           {!user ? (
-
-
-
             // 사용자 로그인 상태가 아닐 때 GoogleLogin 표시
           <div className="login-container">
             <GoogleLogin
