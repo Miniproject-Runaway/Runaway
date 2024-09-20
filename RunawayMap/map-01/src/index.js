@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MapContainer from './components/MapContainer';
-import SearchPlace from './components/SearchPlace';
+import SearchPlace_park from './components/SearchPlace_park';
+import SearchPlace_convstore from './components/SearchPlace_convstore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SearchPlace />
+    <SearchPlace_convstore />
   </React.StrictMode>
 );
 
