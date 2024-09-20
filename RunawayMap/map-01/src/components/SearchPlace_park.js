@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import MapContainer from "./MapContainer";
+import MapContainer_park from "./MapContainer_park";
 
-const SearchPlace = () => {
+const SearchPlace_park = () => {
   const [inputText, setInputText] = useState("");
   const [place, setPlace] = useState("");
 
@@ -25,9 +25,9 @@ const SearchPlace = () => {
         />
         <button type="submit">검색</button>
       </form>
-      <MapContainer searchPlace={place} />
+      <MapContainer_park searchPlace={place} />
     </>
   );
 };
 
-export default SearchPlace;
+export default SearchPlace_park;

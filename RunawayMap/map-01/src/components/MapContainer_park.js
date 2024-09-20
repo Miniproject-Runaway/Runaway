@@ -3,7 +3,7 @@ import './MapContainer.css';
 
 const { kakao } = window;
 
-const MapContainer = ({ searchPlace }) => {
+const MapContainer_park = ({ searchPlace }) => {
   
   const [Places, setPlaces] = useState([]);
 
@@ -111,4 +111,4 @@ const MapContainer = ({ searchPlace }) => {
   );
 };
 
-export default MapContainer;
+export default MapContainer_park;
