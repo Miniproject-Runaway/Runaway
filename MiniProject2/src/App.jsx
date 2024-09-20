@@ -111,6 +111,8 @@ function App() {
       </main>
     </div>
   );
+
+  <span>안녕</span>
 }
 
 export default function AppWrapper() {
