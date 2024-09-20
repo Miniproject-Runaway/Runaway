@@ -11,6 +11,7 @@ import RecordListPage from "./components/pages/RecordListPage";
 import RecordDetailPage from "./components/pages/RecordDetailPage";
 import './button.css'; // 로그인 CSS 파일 추가
 
+
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")) || null); // 사용자 상태 관리

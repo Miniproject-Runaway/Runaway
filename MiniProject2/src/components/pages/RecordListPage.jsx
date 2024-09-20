@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import './list.css';
 
 function RecordListPage({ user }) {
   const [records, setRecords] = useState([]);
@@ -33,21 +34,18 @@ function RecordListPage({ user }) {
   }
 
   return (
-    <div>
+    <div className="record-list-container">
       <h2>기록 목록</h2>
-      <ul>
+      <ul className="record-list">
         {records.map((record) => (
-          <li key={record.id}>
+          <li key={record.id} className="record-item">
             <Link to={`/record/${record.id}`}>
               {record.runningDate} - {record.spot}
             </Link>
           </li>
         ))}
       </ul>
-      {/* 메인 페이지로 이동하는 버튼 추가 */}
-      <Link to="/">
-        <button>메인 페이지로 이동</button>
-      </Link>
+      <Link to="/" className="main-button">메인 페이지로 이동</Link>
     </div>
   );
 }
