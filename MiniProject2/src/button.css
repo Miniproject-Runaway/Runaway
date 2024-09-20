@@ -27,3 +27,29 @@
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
   border: none;
 }
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* 화면 전체 높이 기준으로 중앙 정렬 */
+}
+
+.running-button, .bag-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px; /* 버튼 간격 추가 */
+}
+
+.bag-button:hover, .running-button:hover {
+  background-color: #45a049;
+}
+
+.bag-options {
+  text-align: center;
+}
