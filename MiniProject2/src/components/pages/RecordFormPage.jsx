@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./form.css";
 
-
-function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
+function RecordFormPage({ user }) {
+  // 로그인한 사용자 정보를 받음
   const [formData, setFormData] = useState({
     runningDate: "",
     spot: "",
@@ -52,7 +53,7 @@ function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
       });
 
       if (response.ok) {
-        navigate("/records");  // 기록 목록 페이지로 이동
+        navigate("/records"); // 기록 목록 페이지로 이동
       } else {
         console.error("기록 저장 중 오류 발생:", response.statusText);
       }
@@ -62,14 +63,14 @@ function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
   };
 
   const handleCancel = () => {
-    navigate("/");  // 취소 버튼 클릭 시 메인 페이지로 이동
+    navigate("/"); // 취소 버튼 클릭 시 메인 페이지로 이동
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>러닝 기록 입력</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>날짜: </label>
           <input
             type="date"
@@ -79,7 +80,7 @@ function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Spot: </label>
           <input
             type="text"
@@ -89,7 +90,7 @@ function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>상세 내용: </label>
           <textarea
             name="content"
@@ -98,8 +99,14 @@ function RecordFormPage({ user }) {  // 로그인한 사용자 정보를 받음
             required
           />
         </div>
-        <button type="submit">저장</button>
-        <button type="button" onClick={handleCancel}>취소</button>
+        <div className="form-buttons">
+          <button type="submit" className="save-btn">
+            저장
+          </button>
+          <button type="button" className="cancel-btn" onClick={handleCancel}>
+            취소
+          </button>
+        </div>
       </form>
     </div>
   );

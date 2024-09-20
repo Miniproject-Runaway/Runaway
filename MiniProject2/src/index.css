@@ -29,7 +29,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 10vh; /* 필요에 따라 조정 가능 */
+  min-height: 10vh; 
 }
 
 #core-concepts {
